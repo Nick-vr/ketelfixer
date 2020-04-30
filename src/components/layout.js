@@ -1,8 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import styled, { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 import Header from './header';
+import Footer from './footer';
+
+const GlobalStyle = createGlobalStyle`
+${reset}
+html,
+  body {
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  a {
+    text-decoration: none;
+    color: #FFF;
+    outline: none;
+  }
+  input, textarea, button {
+    font-family: inherit;
+  }
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,11 +43,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <GlobalStyle />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-      </footer>
+      <Footer />
     </>
   );
 };
