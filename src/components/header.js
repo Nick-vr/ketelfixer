@@ -7,6 +7,7 @@ import { Phone } from '@styled-icons/boxicons-solid/Phone';
 import logo from '../images/logo.png';
 
 const HeaderContainer = styled.header`
+  padding: 0 30px;
   height: 120px;
   color: white;
   background-color: #103661;
@@ -19,12 +20,33 @@ const HeaderContainer = styled.header`
 
 const ContactInfoWrapper = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const PhoneInfoWrapper = styled.div`
   border-right: 1px solid black;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    display: flex;
+    align-items: center;
+  }
 `;
-const MailInfoWrapper = styled.div``;
+const MailInfoWrapper = styled.div`
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    display: flex;
+    align-items: center;
+  }
+`;
 
 const StyledPhone = styled(Phone)`
   color: #b87333;
@@ -37,7 +59,9 @@ const StyledMail = styled(Mail)`
 `;
 
 const HeaderLogo = styled.div`
-  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StickyNav = styled.nav`
@@ -62,11 +86,17 @@ const Header = () => (
       </HeaderLogo>
       <ContactInfoWrapper>
         <PhoneInfoWrapper>
-          <StyledPhone />
+          <span>
+            <StyledPhone />
+            <p>Telefoon</p>
+          </span>
           <p>3246536</p>
         </PhoneInfoWrapper>
         <MailInfoWrapper>
-          <StyledMail />
+          <span>
+            <StyledMail />
+            <p>Email</p>
+          </span>
           <p>sfdsf@sdf</p>
         </MailInfoWrapper>
       </ContactInfoWrapper>
