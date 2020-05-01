@@ -1,42 +1,66 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Mail } from '@styled-icons/entypo/Mail';
+import { Phone } from '@styled-icons/boxicons-solid/Phone';
 
-import sideLogo from '../images/work_guy.svg';
+import logo from '../images/logo.png';
 
 const HeaderContainer = styled.header`
   height: 120px;
   color: white;
   background-color: #0e2f5a;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
-const AccountInfoWrapper = styled.div``;
+const ContactInfoWrapper = styled.div`
+  align-self: flex-start;
+`;
+
+const StyledPhone = styled(Phone)`
+  color: pink;
+`;
 
 const HeaderLogo = styled.div`
-  width: 200px;
   height: 70px;
+  background-color: lightpink;
+  align-self: flex-start;
 `;
 
 const StickyNav = styled.nav`
-  height: 100px;
-  background-color: blue;
+  text-align: center;
+  height: 80px;
+  background-color: #ffffff;
   position: sticky;
   top: 0;
 `;
 
-const Banner = styled.div``;
+const Banner = styled.div`
+  text-align: center;
+  height: 500px;
+  background-color: darkgray;
+`;
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <>
     <HeaderContainer>
       <HeaderLogo>
-        <img src={sideLogo} width="80px" alt="sfd" />
-        {siteTitle}
+        <img src={logo} height="35px" alt="logo" />
       </HeaderLogo>
+      <ContactInfoWrapper>
+        <StyledPhone />
+        <Mail />
+        sfggf
+      </ContactInfoWrapper>
     </HeaderContainer>
-    <StickyNav />
-    <Banner />
+    <StickyNav>
+      <p>Sticky navigation</p>
+    </StickyNav>
+    <Banner>
+      <h1>Banner</h1>
+    </Banner>
   </>
 );
 
