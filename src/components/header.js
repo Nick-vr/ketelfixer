@@ -9,24 +9,35 @@ import logo from '../images/logo.png';
 const HeaderContainer = styled.header`
   height: 120px;
   color: white;
-  background-color: #0e2f5a;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  background-color: #103661;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  div:nth-child(2) {
+    grid-column: 10;
+  }
 `;
 
 const ContactInfoWrapper = styled.div`
-  align-self: flex-start;
+  display: flex;
 `;
 
+const PhoneInfoWrapper = styled.div`
+  border-right: 1px solid black;
+`;
+const MailInfoWrapper = styled.div``;
+
 const StyledPhone = styled(Phone)`
-  color: pink;
+  color: #b87333;
+  width: 30px;
+`;
+
+const StyledMail = styled(Mail)`
+  color: #b87333;
+  width: 30px;
 `;
 
 const HeaderLogo = styled.div`
   height: 70px;
-  background-color: lightpink;
-  align-self: flex-start;
 `;
 
 const StickyNav = styled.nav`
@@ -50,9 +61,14 @@ const Header = () => (
         <img src={logo} height="35px" alt="logo" />
       </HeaderLogo>
       <ContactInfoWrapper>
-        <StyledPhone />
-        <Mail />
-        sfggf
+        <PhoneInfoWrapper>
+          <StyledPhone />
+          <p>3246536</p>
+        </PhoneInfoWrapper>
+        <MailInfoWrapper>
+          <StyledMail />
+          <p>sfdsf@sdf</p>
+        </MailInfoWrapper>
       </ContactInfoWrapper>
     </HeaderContainer>
     <StickyNav>
