@@ -1,16 +1,19 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Mail } from '@styled-icons/entypo/Mail';
 import { Phone } from '@styled-icons/boxicons-solid/Phone';
 
 import logo from '../images/logo.png';
 
+import Nav from './nav';
+
 const HeaderContainer = styled.header`
   padding: 0 30px;
   height: 120px;
-  color: white;
-  background-color: #103661;
+  color: #fff;
+  /* background-color: #103661; */
+  background-color: black;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   div:nth-child(2) {
@@ -25,57 +28,50 @@ const ContactInfoWrapper = styled.div`
 `;
 
 const PhoneInfoWrapper = styled.div`
-  border-right: 1px solid black;
+  border-right: 1px solid #696866;
   height: 70px;
+  min-width: 200px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 
   span {
     display: flex;
     align-items: center;
+
+    p {
+      color: #b87333;
+      margin-left: 5px;
+    }
+  }
+
+  h2 {
+    font-family: 'Roboto Slab', serif;
+    font-style: italic;
+    text-align: left;
+    margin-top: 5px;
   }
 `;
-const MailInfoWrapper = styled.div`
-  height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  span {
-    display: flex;
-    align-items: center;
-  }
+const MailInfoWrapper = styled(PhoneInfoWrapper)`
+  border-right: none;
 `;
 
 const StyledPhone = styled(Phone)`
   color: #b87333;
-  width: 30px;
+  width: 20px;
 `;
 
 const StyledMail = styled(Mail)`
   color: #b87333;
-  width: 30px;
+  width: 20px;
 `;
 
 const HeaderLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-const StickyNav = styled.nav`
-  text-align: center;
-  height: 80px;
-  background-color: #ffffff;
-  position: sticky;
-  top: 0;
-`;
-
-const Banner = styled.div`
-  text-align: center;
-  height: 500px;
-  background-color: darkgray;
 `;
 
 const Header = () => (
@@ -90,32 +86,19 @@ const Header = () => (
             <StyledPhone />
             <p>Telefoon</p>
           </span>
-          <p>3246536</p>
+          <h2>+32 499 99 99</h2>
         </PhoneInfoWrapper>
         <MailInfoWrapper>
           <span>
             <StyledMail />
             <p>Email</p>
           </span>
-          <p>sfdsf@sdf</p>
+          <h2>contact@ketelfixer.be</h2>
         </MailInfoWrapper>
       </ContactInfoWrapper>
     </HeaderContainer>
-    <StickyNav>
-      <p>Sticky navigation</p>
-    </StickyNav>
-    <Banner>
-      <h1>Banner</h1>
-    </Banner>
+    <Nav />
   </>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: `dsf`,
-};
 
 export default Header;

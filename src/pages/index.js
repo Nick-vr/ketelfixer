@@ -1,12 +1,22 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+const Banner = styled.div`
+  text-align: center;
+  height: 500px;
+  background-color: darkgray;
+`;
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Banner>
+      <h1>Banner</h1>
+    </Banner>
     <h1>Hi people</h1>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti itaque

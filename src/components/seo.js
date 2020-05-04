@@ -45,7 +45,20 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
   );
 }
 

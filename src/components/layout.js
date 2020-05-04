@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 import Header from './header';
@@ -12,7 +12,7 @@ ${reset}
 html,
   body {
     box-sizing: border-box;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'PT Sans', sans-serif;
   }
   *,
   *:before,
