@@ -43,11 +43,11 @@ const PhoneInfoWrapper = styled.div`
 
     p {
       color: #b87333;
-      margin-left: 5px;
+      margin: 0 0 0.1rem 0.3rem;
     }
   }
 
-  h2 {
+  p {
     font-family: 'Roboto Slab', serif;
     font-style: italic;
     text-align: left;
@@ -86,14 +86,14 @@ const Header = () => (
             <StyledPhone />
             <p>Telefoon</p>
           </span>
-          <h2>+32 499 99 99</h2>
+          <p>+32 499 99 99</p>
         </PhoneInfoWrapper>
         <MailInfoWrapper>
           <span>
             <StyledMail />
             <p>Email</p>
           </span>
-          <h2>contact@ketelfixer.be</h2>
+          <p>contact@ketelfixer.be</p>
         </MailInfoWrapper>
       </ContactInfoWrapper>
     </HeaderContainer>

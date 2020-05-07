@@ -3,6 +3,9 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const StickyNav = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   height: 80px;
   background-color: #ffffff;
@@ -11,8 +14,17 @@ const StickyNav = styled.nav`
   ul {
     display: flex;
     li {
+      margin: 0 1.5rem;
       a {
+        text-transform: uppercase;
         color: black;
+        font-size: 1.3rem;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          background-color: #000;
+          color: #fff;
+        }
       }
     }
   }
@@ -38,7 +50,7 @@ const navList = [
 ];
 
 const navListItems = navList.map((item, index) => (
-  <li>
+  <li key={index}>
     <Link
       to={item.link}
       activeStyle={{ backgroundColor: '#000', color: '#FFF' }}

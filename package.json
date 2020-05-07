@@ -3,7 +3,7 @@
   "private": true,
   "description": "Website voor ketelfixer, renovatie van badkamers, ketel onderhoud etc.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nick Van Royen",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.21.4",
