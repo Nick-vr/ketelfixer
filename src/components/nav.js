@@ -3,14 +3,16 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const StickyNav = styled.nav`
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 80px;
+  height: 3.5rem;
   background-color: #ffffff;
   position: sticky;
   top: 0;
+  box-shadow: inset 0px -11px 3px -11px #ccc;
   ul {
     display: flex;
     li {
@@ -18,7 +20,7 @@ const StickyNav = styled.nav`
       a {
         text-transform: uppercase;
         color: black;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         transition: all 0.5s ease-in-out;
         &:hover {
           cursor: pointer;

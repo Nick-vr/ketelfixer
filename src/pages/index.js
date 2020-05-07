@@ -1,13 +1,12 @@
 import React from 'react';
-// import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import IndexBanner from '../components/indexBanner';
 
 const Banner = styled.div`
   text-align: center;
-  height: 500px;
   background-color: darkgray;
 `;
 
@@ -15,9 +14,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Banner>
-      <h1>Banner</h1>
+      <IndexBanner />
     </Banner>
-    <h1>Hi people</h1>
+    <h1>Hi</h1>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti itaque
       ducimus mollitia consequatur a sit, consectetur perferendis tempora iure
