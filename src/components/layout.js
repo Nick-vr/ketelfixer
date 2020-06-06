@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 import Header from './header';
@@ -22,6 +22,9 @@ html,
   }
   @media (max-width: 400px) {
     html { font-size: 13px; }
+  }
+  main {
+    padding-bottom: 2.5rem;    /* Footer height */
   }
   h1 {
     font-size: 2.5rem;
@@ -47,6 +50,11 @@ html,
   }
 `;
 
+const Wrapper = styled.div`
+  position: relative;
+  min-height: 100vh;
+`;
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -59,12 +67,12 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <>
+    <Wrapper>
       <Header siteTitle={data.site.siteMetadata.title} />
       <GlobalStyle />
       <main>{children}</main>
       <Footer />
-    </>
+    </Wrapper>
   );
 };
 
