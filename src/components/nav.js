@@ -34,12 +34,12 @@ const StickyNav = styled.nav`
 
 const navList = [
   {
-    name: 'Startpagina',
+    name: 'Home',
     link: '/',
   },
   {
-    name: 'Over Ketelfixer',
-    link: '/over-ketelfixer',
+    name: 'Over Ons',
+    link: '/over-ons',
   },
   {
     name: 'Realisaties',
