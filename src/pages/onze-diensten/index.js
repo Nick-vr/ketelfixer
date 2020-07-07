@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
+import styled from 'styled-components'
 
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
+import Layout from '../../components/layout'
+import SEO from '../../components/seo'
 
 const OnzeDienstenPage = () => (
   <Layout>
@@ -18,6 +19,6 @@ const OnzeDienstenPage = () => (
       <p>- een wettelijk reinigings- en verbrandingsattest afleveren.</p>
     </div>
   </Layout>
-);
+)
 
-export default OnzeDienstenPage;
+export default OnzeDienstenPage

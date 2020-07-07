@@ -8,6 +8,14 @@
         "optionalDependencies": false,
         "peerDependencies": false
       }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "semi": false
+      }
     ]
   }
 }

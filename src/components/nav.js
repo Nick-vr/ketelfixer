@@ -1,17 +1,18 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 const StickyNav = styled.nav`
   z-index: 100;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 3.5rem;
   background-color: #ffffff;
-  position: sticky;
-  top: 0;
   box-shadow: inset 0px -11px 3px -11px #ccc;
   ul {
     display: flex;
@@ -30,7 +31,7 @@ const StickyNav = styled.nav`
       }
     }
   }
-`;
+`
 
 const navList = [
   {
@@ -53,7 +54,7 @@ const navList = [
     name: 'Contact',
     link: '/contact',
   },
-];
+]
 
 const navListItems = navList.map((item, index) => (
   <li key={index}>
@@ -64,7 +65,7 @@ const navListItems = navList.map((item, index) => (
       {item.name}
     </Link>
   </li>
-));
+))
 
 const Nav = () => (
   <>
@@ -72,6 +73,6 @@ const Nav = () => (
       <ul>{navListItems}</ul>
     </StickyNav>
   </>
-);
+)
 
-export default Nav;
+export default Nav

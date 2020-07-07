@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
-import styled, { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import styled, { createGlobalStyle } from 'styled-components'
+import reset from 'styled-reset'
 
-import Header from './header';
-import Footer from './footer';
+import Header from './header'
+import Footer from './footer'
 
 const GlobalStyle = createGlobalStyle`
 ${reset}
@@ -48,12 +48,12 @@ html,
   input, textarea, button {
     font-family: inherit;
   }
-`;
+`
 
 const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
-`;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <Wrapper>
@@ -73,11 +73,11 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <Footer />
     </Wrapper>
-  );
-};
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout

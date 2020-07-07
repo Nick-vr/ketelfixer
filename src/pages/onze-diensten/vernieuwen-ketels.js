@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
+import Layout from '../../components/layout'
+import SEO from '../../components/seo'
 
 const VernieuwenKetelsPage = () => (
   <Layout>
@@ -15,6 +15,6 @@ const VernieuwenKetelsPage = () => (
       </p>
     </div>
   </Layout>
-);
+)
 
-export default VernieuwenKetelsPage;
+export default VernieuwenKetelsPage

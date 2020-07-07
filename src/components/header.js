@@ -1,31 +1,34 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
-import styled from 'styled-components';
-import { Mail } from '@styled-icons/entypo/Mail';
-import { Phone } from '@styled-icons/boxicons-solid/Phone';
+import React from 'react'
+import styled from 'styled-components'
+import { Mail } from '@styled-icons/entypo/Mail'
+import { Phone } from '@styled-icons/boxicons-solid/Phone'
 
-import logo from '../images/logo.png';
+import logo from '../images/logo.png'
+import bubble from '../images/papyrus.png'
 
-import Nav from './nav';
+import Nav from './nav'
 
 const HeaderContainer = styled.header`
+  position: relative;
   padding: 0 30px;
   height: 120px;
   color: #fff;
-  /* background-color: #103661; */
-  background-color: black;
+  /* background-color: black; */
+  background-image: url(${bubble});
+  opacity: 0.9;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   div:nth-child(2) {
     grid-column: 10;
   }
-`;
+`
 
 const ContactInfoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const PhoneInfoWrapper = styled.div`
   border-right: 1px solid #696866;
@@ -53,26 +56,26 @@ const PhoneInfoWrapper = styled.div`
     text-align: left;
     margin-top: 5px;
   }
-`;
+`
 const MailInfoWrapper = styled(PhoneInfoWrapper)`
   border-right: none;
-`;
+`
 
 const StyledPhone = styled(Phone)`
   color: #b87333;
   width: 20px;
-`;
+`
 
 const StyledMail = styled(Mail)`
   color: #b87333;
   width: 20px;
-`;
+`
 
 const HeaderLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const Header = () => (
   <>
@@ -99,6 +102,6 @@ const Header = () => (
     </HeaderContainer>
     <Nav />
   </>
-);
+)
 
-export default Header;
+export default Header
