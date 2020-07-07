@@ -42,6 +42,10 @@ const navList = [
     link: '/over-ons',
   },
   {
+    name: 'Onze Diensten',
+    link: '/onze-diensten',
+  },
+  {
     name: 'Realisaties',
     link: '/realisaties',
   },
