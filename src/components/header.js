@@ -5,22 +5,27 @@ import { Mail } from '@styled-icons/entypo/Mail'
 import { Phone } from '@styled-icons/boxicons-solid/Phone'
 
 import logo from '../images/logo.png'
-import bubble from '../images/papyrus.png'
+import prism from '../images/prism.png'
 
 import Nav from './nav'
 
 const HeaderContainer = styled.header`
+  display: flex;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: repeat(10, 1fr); */
   position: relative;
   padding: 0 30px;
   height: 120px;
   color: #fff;
-  /* background-color: black; */
-  background-image: url(${bubble});
-  opacity: 0.9;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  background-image: url(${prism});
   div:nth-child(2) {
     grid-column: 10;
+  }
+
+  @media (max-width: 600px) {
+    height: 200px;
+    flex-direction: column;
   }
 `
 
@@ -28,6 +33,10 @@ const ContactInfoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 `
 
 const PhoneInfoWrapper = styled.div`

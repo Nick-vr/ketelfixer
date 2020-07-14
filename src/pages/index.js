@@ -1,14 +1,20 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react'
 import styled from 'styled-components'
+import { Plumbing } from '@styled-icons/material-sharp/Plumbing'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import IndexBanner from '../components/indexBanner'
-import img from '../images/engineer.png'
 
 const Banner = styled.div`
   text-align: center;
   background-color: darkgray;
+`
+
+const StyledPlumbing = styled(Plumbing)`
+  color: #b87333;
+  width: 60px;
 `
 
 const IndexPage = () => (
@@ -17,8 +23,8 @@ const IndexPage = () => (
     <Banner>
       <IndexBanner />
     </Banner>
+    <StyledPlumbing />
     <h1>Onze diensten</h1>
-    <img src={img} width="200px" height="1000px" alt="yeet" />
   </Layout>
 )
 
