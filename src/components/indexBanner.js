@@ -1,6 +1,6 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const IndexBanner = () => {
   const data = useStaticQuery(graphql`
@@ -13,11 +13,11 @@ const IndexBanner = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <Img fluid={data.indexBannerImage.childImageSharp.fluid} alt="Banner" />
-  );
-};
+  )
+}
 
-export default IndexBanner;
+export default IndexBanner

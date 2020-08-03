@@ -12,8 +12,6 @@ import Nav from './nav'
 const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
-  /* display: grid;
-  grid-template-columns: repeat(10, 1fr); */
   position: relative;
   padding: 0 30px;
   height: 120px;
@@ -23,7 +21,7 @@ const HeaderContainer = styled.header`
     grid-column: 10;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 735px) {
     height: 200px;
     flex-direction: column;
   }
@@ -34,8 +32,9 @@ const ContactInfoWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 600px) {
+  @media (max-width: 735px) {
     justify-content: center;
+    padding-bottom: 20px;
   }
 `
 
@@ -48,6 +47,10 @@ const PhoneInfoWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+
+  @media (max-width: 735px) {
+    min-width: 180px;
+  }
 
   span {
     display: flex;
@@ -84,6 +87,10 @@ const HeaderLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 735px) {
+    padding-top: 30px;
+  }
 `
 
 const Header = () => (
