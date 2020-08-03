@@ -6,13 +6,9 @@ import { Construction } from '@styled-icons/material-sharp/Construction'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import IndexBanner from '../components/indexBanner'
-import MaintenanceIMG from '../images/maintenance.jpg'
-
-const Banner = styled.div`
-  text-align: center;
-  /* background-color: darkgray; */
-`
+import Banner from '../components/images/indexBanner'
+import Maintenance from '../components/images/maintenance'
+import ProjectIMG from '../images/1.jpg'
 
 const StyledPlumbing = styled(Plumbing)`
   color: #b87333;
@@ -25,36 +21,56 @@ const StyledConstruction = styled(Construction)`
 `
 
 const Section = styled.section`
+  position: relative;
   font-family: 'Roboto Slab', serif;
+
+  svg {
+    display: block;
+    margin: 30px auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    ::after {
+      content: '';
+      width: 60px;
+      height: 5px;
+      background-color: #b87333;
+      position: absolute;
+      top: 160px;
+      left: calc(50% - 30px);
+    }
+  }
 `
 
-const Wrapper = styled.div`
-  width: 400px;
-  height: 200px;
-  background-color: lightgrey;
+const DienstenWrapper = styled.div`
+  margin-top: 150px;
 `
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-
-    <IndexBanner />
-
+    <Banner />
+    {/* ONZE DIENSTEN section */}
     <Section>
-      {/* ONZE DIENSTEN */}
-      <Wrapper>
-        <StyledPlumbing />
-        <h1>Onze diensten</h1>
-      </Wrapper>
-      {/* ONZE DIENSTEN */}
-
-      {/* ONZE PROJECTEN */}
-      <Wrapper>
-        <StyledConstruction />
-        <h1>Onze projecten</h1>
-      </Wrapper>
-      {/* ONZE PROJECTEN */}
+      <StyledPlumbing />
+      <h1>Onze diensten</h1>
+      <DienstenWrapper>
+        <Maintenance />
+      </DienstenWrapper>
     </Section>
+    {/* End ONZE DIENSTEN section */}
+
+    {/* ONZE PROJECTEN section */}
+    <Section>
+      <StyledConstruction />
+      <h1>Onze projecten</h1>
+      <img src={ProjectIMG} alt="img" />
+    </Section>
+    {/* End ONZE PROJECTEN section */}
   </Layout>
 )
 
