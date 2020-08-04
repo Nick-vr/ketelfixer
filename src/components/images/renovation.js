@@ -14,10 +14,10 @@ const StyledFigcaption = styled.figcaption`
   margin-top: 20px;
 `
 
-const Maintenance = () => {
+const Renovation = () => {
   const data = useStaticQuery(graphql`
     query {
-      maintenanceImage: file(relativePath: { eq: "maintenance.jpg" }) {
+      renovationImage: file(relativePath: { eq: "bathroom.jpg" }) {
         childImageSharp {
           fixed(width: 350, height: 230, quality: 100) {
             ...GatsbyImageSharpFixed
@@ -30,12 +30,12 @@ const Maintenance = () => {
   return (
     <StyledFigure>
       <Img
-        fixed={data.maintenanceImage.childImageSharp.fixed}
-        alt="Onderhoud & Keuringen IMG"
+        fixed={data.renovationImage.childImageSharp.fixed}
+        alt="Badkamer Renovatie IMG"
       />
-      <StyledFigcaption>Onderhoud & Keuringen</StyledFigcaption>
+      <StyledFigcaption>Badkamer Renovatie</StyledFigcaption>
     </StyledFigure>
   )
 }
 
-export default Maintenance
+export default Renovation

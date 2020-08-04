@@ -6,8 +6,10 @@ import { Construction } from '@styled-icons/material-sharp/Construction'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Banner from '../components/images/indexBanner'
+import Banner from '../components/images/banner'
 import Maintenance from '../components/images/maintenance'
+import Renewing from '../components/images/renewing'
+import Renovation from '../components/images/renovation'
 import ProjectIMG from '../images/1.jpg'
 
 const StyledPlumbing = styled(Plumbing)`
@@ -22,8 +24,11 @@ const StyledConstruction = styled(Construction)`
 
 const Section = styled.section`
   position: relative;
-  font-family: 'Roboto Slab', serif;
+  margin-top: 60px;
+`
 
+const ServiceSection = styled(Section)`
+  font-family: 'Roboto Slab', serif;
   svg {
     display: block;
     margin: 30px auto;
@@ -45,31 +50,91 @@ const Section = styled.section`
     }
   }
 `
+const ProjectSection = styled(ServiceSection)``
 
 const DienstenWrapper = styled.div`
-  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+
+  @media (min-width: 1280px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  figure {
+    margin: 40px;
+  }
+`
+
+const AboutSection = styled(Section)`
+  background: rgb(184, 115, 51, 0.5);
+  height: 300px;
+  padding: 50px;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    ::after {
+      content: '';
+      width: 120px;
+      height: 5px;
+      background-color: #b87333;
+      position: absolute;
+      top: 90px;
+      left: 50px;
+    }
+  }
+
+  p {
+    margin: 20px 0;
+    font-weight: 100;
+    text-align: justify;
+  }
 `
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Banner />
+
     {/* ONZE DIENSTEN section */}
-    <Section>
+    <ServiceSection>
       <StyledPlumbing />
       <h1>Onze diensten</h1>
       <DienstenWrapper>
         <Maintenance />
+        <Renewing />
+        <Renovation />
       </DienstenWrapper>
-    </Section>
+    </ServiceSection>
     {/* End ONZE DIENSTEN section */}
 
+    {/* DEVIDER section */}
+    <AboutSection>
+      <h2>Beste service in het waasland</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ea
+        itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
+        necessitatibus aliquid debitis enim perferendis consequatur fugit
+        dolorum quisquam veniam vitae?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ea
+        itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
+        necessitatibus aliquid debitis enim perferendis consequatur fugit
+        dolorum quisquam veniam vitae?
+      </p>
+    </AboutSection>
+    {/* End DEVIDER section */}
+
     {/* ONZE PROJECTEN section */}
-    <Section>
+    <ProjectSection>
       <StyledConstruction />
       <h1>Onze projecten</h1>
       <img src={ProjectIMG} alt="img" />
-    </Section>
+    </ProjectSection>
     {/* End ONZE PROJECTEN section */}
   </Layout>
 )
