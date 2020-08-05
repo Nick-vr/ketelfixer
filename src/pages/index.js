@@ -6,11 +6,12 @@ import { Construction } from '@styled-icons/material-sharp/Construction'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import ProjectsBox from '../components/projectsBox'
+
 import Banner from '../components/images/banner'
 import Maintenance from '../components/images/maintenance'
 import Renewing from '../components/images/renewing'
 import Renovation from '../components/images/renovation'
-import ProjectIMG from '../images/1.jpg'
 
 const StyledPlumbing = styled(Plumbing)`
   color: #b87333;
@@ -70,7 +71,6 @@ const DienstenWrapper = styled.div`
 
 const AboutSection = styled(Section)`
   background: rgb(184, 115, 51, 0.5);
-  height: 300px;
   padding: 50px;
 
   h2 {
@@ -94,49 +94,52 @@ const AboutSection = styled(Section)`
   }
 `
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Banner />
+const IndexPage = () => {
+  const hehe = ''
 
-    {/* ONZE DIENSTEN section */}
-    <ServiceSection>
-      <StyledPlumbing />
-      <h1>Onze diensten</h1>
-      <DienstenWrapper>
-        <Maintenance />
-        <Renewing />
-        <Renovation />
-      </DienstenWrapper>
-    </ServiceSection>
-    {/* End ONZE DIENSTEN section */}
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Banner />
 
-    {/* DEVIDER section */}
-    <AboutSection>
-      <h2>Beste service in het waasland</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ea
-        itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
-        necessitatibus aliquid debitis enim perferendis consequatur fugit
-        dolorum quisquam veniam vitae?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ea
-        itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
-        necessitatibus aliquid debitis enim perferendis consequatur fugit
-        dolorum quisquam veniam vitae?
-      </p>
-    </AboutSection>
-    {/* End DEVIDER section */}
+      {/* ONZE DIENSTEN section */}
+      <ServiceSection>
+        <StyledPlumbing />
+        <h1>Onze diensten</h1>
+        <DienstenWrapper>
+          <Maintenance />
+          <Renewing />
+          <Renovation />
+        </DienstenWrapper>
+      </ServiceSection>
+      {/* End ONZE DIENSTEN section */}
 
-    {/* ONZE PROJECTEN section */}
-    <ProjectSection>
-      <StyledConstruction />
-      <h1>Onze projecten</h1>
-      <img src={ProjectIMG} alt="img" />
-    </ProjectSection>
-    {/* End ONZE PROJECTEN section */}
-  </Layout>
-)
+      {/* OVER ONS section */}
+      <AboutSection>
+        <h2>Over ons</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non
+          ea itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
+          necessitatibus aliquid debitis enim perferendis consequatur fugit
+          dolorum quisquam veniam vitae?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non
+          ea itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
+          necessitatibus aliquid debitis enim perferendis consequatur fugit
+          dolorum quisquam veniam vitae?
+        </p>
+      </AboutSection>
+      {/* End OVER ONS section */}
 
+      {/* ONZE PROJECTEN section */}
+      <ProjectSection>
+        <StyledConstruction />
+        <h1>Onze projecten</h1>
+        <ProjectsBox />
+      </ProjectSection>
+      {/* End ONZE PROJECTEN section */}
+    </Layout>
+  )
+}
 export default IndexPage
