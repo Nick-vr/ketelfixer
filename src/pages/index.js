@@ -94,52 +94,48 @@ const AboutSection = styled(Section)`
   }
 `
 
-const IndexPage = () => {
-  const hehe = ''
+const IndexPage = () => (
+  <Layout>
+    <SEO title="Home" />
+    <Banner />
 
-  return (
-    <Layout>
-      <SEO title="Home" />
-      <Banner />
+    {/* ONZE DIENSTEN section */}
+    <ServiceSection>
+      <StyledPlumbing />
+      <h1>Onze diensten</h1>
+      <DienstenWrapper>
+        <Maintenance />
+        <Renewing />
+        <Renovation />
+      </DienstenWrapper>
+    </ServiceSection>
+    {/* End ONZE DIENSTEN section */}
 
-      {/* ONZE DIENSTEN section */}
-      <ServiceSection>
-        <StyledPlumbing />
-        <h1>Onze diensten</h1>
-        <DienstenWrapper>
-          <Maintenance />
-          <Renewing />
-          <Renovation />
-        </DienstenWrapper>
-      </ServiceSection>
-      {/* End ONZE DIENSTEN section */}
+    {/* OVER ONS section */}
+    <AboutSection>
+      <h2>Over ons</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ea
+        itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
+        necessitatibus aliquid debitis enim perferendis consequatur fugit
+        dolorum quisquam veniam vitae?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ea
+        itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
+        necessitatibus aliquid debitis enim perferendis consequatur fugit
+        dolorum quisquam veniam vitae?
+      </p>
+    </AboutSection>
+    {/* End OVER ONS section */}
 
-      {/* OVER ONS section */}
-      <AboutSection>
-        <h2>Over ons</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non
-          ea itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
-          necessitatibus aliquid debitis enim perferendis consequatur fugit
-          dolorum quisquam veniam vitae?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non
-          ea itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
-          necessitatibus aliquid debitis enim perferendis consequatur fugit
-          dolorum quisquam veniam vitae?
-        </p>
-      </AboutSection>
-      {/* End OVER ONS section */}
-
-      {/* ONZE PROJECTEN section */}
-      <ProjectSection>
-        <StyledConstruction />
-        <h1>Onze projecten</h1>
-        <ProjectsBox />
-      </ProjectSection>
-      {/* End ONZE PROJECTEN section */}
-    </Layout>
-  )
-}
+    {/* ONZE PROJECTEN section */}
+    <ProjectSection>
+      <StyledConstruction />
+      <h1>Onze projecten</h1>
+      <ProjectsBox />
+    </ProjectSection>
+    {/* End ONZE PROJECTEN section */}
+  </Layout>
+)
 export default IndexPage

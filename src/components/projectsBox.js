@@ -37,17 +37,16 @@ const ProjectsBox = () => {
   `)
 
   return (
-    <>
-      <Wrapper>
-        {data.allFile.edges.map(image => (
-          <Img
-            fixed={image.node.childImageSharp.fixed}
-            alt={`${image.node.base.split('-')[1].split('.')[0]} foto`}
-            style={{ margin: '20px' }}
-          />
-        ))}
-      </Wrapper>
-    </>
+    <Wrapper>
+      {data.allFile.edges.map((image, index) => (
+        <Img
+          key={index}
+          fixed={image.node.childImageSharp.fixed}
+          alt={`${image.node.base.split('-')[1].split('.')[0]} foto`}
+          style={{ margin: '20px' }}
+        />
+      ))}
+    </Wrapper>
   )
 }
 
