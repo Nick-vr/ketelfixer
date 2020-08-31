@@ -42,9 +42,9 @@ const Footer = () => (
       {new Date().getFullYear()} Ketelfixer
     </FooterLeft>
     <FooterRight>
-      +32 499 99 99
+      Tel: +32 499 99 99
       <br />
-      contact@ketelfixer.be
+      Email: contact@ketelfixer.be
     </FooterRight>
   </Wrapper>
 )

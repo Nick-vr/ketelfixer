@@ -5,19 +5,16 @@ import { ContactMail } from '@styled-icons/material-sharp/ContactMail'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import ProjectsBox from '../components/projectsBox'
+import ContactForm from '../components/contactForm'
 
 const StyledContactMail = styled(ContactMail)`
   color: #b87333;
   width: 60px;
 `
 
-const Section = styled.section`
+const StyledSection = styled.section`
   position: relative;
   margin-top: 60px;
-`
-
-const ProjectSection = styled(Section)`
   font-family: 'Roboto Slab', serif;
   svg {
     display: block;
@@ -44,11 +41,11 @@ const ProjectSection = styled(Section)`
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact" description="Contacteer ons" />
-    <ProjectSection>
+    <StyledSection>
       <StyledContactMail />
       <h1>Neem contact op</h1>
-      <p>blkabla</p>
-    </ProjectSection>
+      <ContactForm />
+    </StyledSection>
   </Layout>
 )
 
