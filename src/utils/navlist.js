@@ -4,10 +4,6 @@ const navList = [
     link: '/',
   },
   {
-    name: 'Over Ons',
-    link: '/over-ons',
-  },
-  {
     name: 'Onze Diensten',
     link: '/onze-diensten',
   },
