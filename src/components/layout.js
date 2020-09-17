@@ -20,11 +20,11 @@ html {
 @media (max-width: 900px) {
 html { font-size: 15px; }
 }
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   html { font-size: 13px; }
 }
 main {
-  padding-bottom: 70px;    /* Footer height */
+  padding-bottom: 5rem;    /* Footer height */
 }
 h1 {
   font-size: 2.5rem;

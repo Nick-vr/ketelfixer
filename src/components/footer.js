@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 70px;
+  height: 5rem;
   background-color: #363636;
   a {
     color: rgb(0, 0, 0, 0.5);
