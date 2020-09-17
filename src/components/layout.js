@@ -24,7 +24,7 @@ html { font-size: 15px; }
   html { font-size: 13px; }
 }
 main {
-  padding-bottom: 11rem;    /* Footer height */
+  padding-bottom: 70px;    /* Footer height */
 }
 h1 {
   font-size: 2.5rem;

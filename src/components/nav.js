@@ -17,10 +17,6 @@ const StickyNav = styled.nav`
   background-color: #ffffff;
   box-shadow: inset 0px -11px 3px -11px #ccc;
 
-  /* @media (max-width: 735px) {
-    overflow: hidden;
-  } */
-
   ul {
     display: flex;
     li {
@@ -36,7 +32,7 @@ const StickyNav = styled.nav`
           color: #fff;
         }
         @media (max-width: 735px) {
-          font-size: 0.6rem;
+          font-size: 0.7rem;
         }
       }
     }

@@ -67,7 +67,7 @@ const ContactInfo = () => (
         <StyledPhone />
         <p>Telefoon</p>
       </span>
-      <p>+32 499 99 99</p>
+      <p>+32 499 15 10 44</p>
     </PhoneInfoWrapper>
     <MailInfoWrapper>
       <span>

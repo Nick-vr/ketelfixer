@@ -71,7 +71,7 @@ const DienstenWrapper = styled.div`
 
 const AboutSection = styled(Section)`
   background: rgb(184, 115, 51, 0.5);
-  padding: 50px;
+  padding: 50px 50px;
 
   h2 {
     font-size: 1.8rem;
@@ -115,16 +115,13 @@ const IndexPage = () => (
     <AboutSection>
       <h2>Over ons</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ea
-        itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
-        necessitatibus aliquid debitis enim perferendis consequatur fugit
-        dolorum quisquam veniam vitae?
+        Wij zijn een bedrijf met meer dan 20 jaar ervaring in de sector.
+        Renovatie, nieuwbouw, onderhoud & herstelling. Van woningen tot
+        appartementen, winkels en bedrijven.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ea
-        itaque tenetur nulla, adipisci soluta molestiae voluptatem nisi
-        necessitatibus aliquid debitis enim perferendis consequatur fugit
-        dolorum quisquam veniam vitae?
+        Wij kunnen ook pakketten samenstellen voor zelfbouw. We werken ook samen
+        met bedrijven voor totaal renovatie. Wij staan je bij met raad en daad!
       </p>
     </AboutSection>
     {/* End OVER ONS section */}
