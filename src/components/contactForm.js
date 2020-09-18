@@ -2,31 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 `
 
 const StyledForm = styled.form`
   font-family: 'PT Sans', sans-serif;
   margin: 100px 0 50px;
-  /* padding: 50px; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* position: relative; */
-  background-color: yellow;
-
-  textarea {
-    min-width: 100%;
-    padding-top: 20px;
-    border: none;
-    overflow: auto;
-    outline: none;
-    &:required {
-      box-shadow: none;
-    }
-  }
 `
 
 const Input = styled.input`
@@ -38,63 +24,112 @@ const Input = styled.input`
     box-shadow: none;
   }
 `
-const Span = styled.span`
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  color: red;
 
-  ${Input}:focus & {
-    bottom: 40px;
+const Textarea = styled.textarea`
+  padding-top: 10px;
+  font-size: 13px;
+  width: 250px;
+  height: 100px;
+  border: none;
+  outline: none;
+  resize: none;
+  &:required {
+    box-shadow: none;
   }
 `
 
-const Label = styled.label`
-  border-bottom: 2px solid black;
+const Span = styled.span`
+  position: absolute;
+  font-size: 0.9rem;
+  bottom: 0px;
+  left: 0px;
+  transition: all 0.2s ease-in-out;
+  color: #a3a3a3;
+`
 
-  & ${Input}:focus + ${Span} {
-    bottom: 40px;
+const Label = styled.label`
+  border-bottom: 1px solid #a3a3a3;
+  height: 100px;
+
+  & ${Input}:valid {
+    border-bottom: 1px solid green;
+  }
+
+  /* TODO: fix green shit */
+  & textarea:valid {
+    border-bottom: 1px solid green;
+  }
+
+  & ${Input}:focus + ${Span}, ${Input}:valid + ${Span} {
+    bottom: 30px;
+  }
+
+  & ${Textarea}:focus + ${Span}, ${Textarea}:valid + ${Span} {
+    bottom: 100px;
+  }
+
+  input:not(:placeholder-shown) + span {
+    bottom: 30px;
   }
 `
 
 const InputWrapper = styled.div`
-  background: lightgoldenrodyellow;
-  width: 300px;
-  margin-bottom: 10px;
   position: relative;
+  margin: 30px 0;
+`
+
+const Button = styled.button`
+  margin: 20px 0 40px;
+  border: none;
+  border-radius: 45px;
+  width: 150px;
+  height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #fff;
+  color: #a3a3a3;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: #2ee59d;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
 `
 
 const contactForm = () => (
   <Wrapper>
     <StyledForm name="contact" netlify>
       <InputWrapper>
-        <Label htmlFor="FirstName">
-          <Input type="text" name="FirstName" required />
+        <Label>
+          <Input type="text" name="firstName" placeholder=" " required />
           <Span>Voornaam </Span>
         </Label>
       </InputWrapper>
+      <InputWrapper>
+        <Label>
+          <Input type="text" name="lastName" placeholder=" " required />
+          <Span>Achternaam </Span>
+        </Label>
+      </InputWrapper>
+      <InputWrapper>
+        <Label>
+          <Input type="email" name="email" placeholder=" " required />
+          <Span>Email </Span>
+        </Label>
+      </InputWrapper>
+      <InputWrapper>
+        <Label>
+          <Textarea name="message" required />
+          <Span>Bericht </Span>
+        </Label>
+      </InputWrapper>
 
-      {/* <p>
-        <label htmlFor="name">
-          <span>Naam </span>
-          <input type="text" name="name" required />
-        </label>
-      </p>
-      <p>
-        <label htmlFor="email">
-          <span>Email </span>
-          <input type="email" name="email" required />
-        </label>
-      </p>
-      <p>
-        <label htmlFor="message">
-          <span>Bericht </span>
-          <textarea name="message" required />
-        </label>
-      </p>
-      <p>
-        <button type="submit">Verzenden</button>
-      </p> */}
+      <Button type="submit">Verzenden</Button>
     </StyledForm>
   </Wrapper>
 )

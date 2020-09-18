@@ -2,11 +2,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Plumbing } from '@styled-icons/material-sharp/Plumbing'
-import { Construction } from '@styled-icons/material-sharp/Construction'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import ProjectsBox from '../../components/projectsBox'
 
 // import Banner from '../components/images/banner'
 import Maintenance from '../../components/images/maintenance'
@@ -14,11 +12,6 @@ import Renewing from '../../components/images/renewing'
 import Renovation from '../../components/images/renovation'
 
 const StyledPlumbing = styled(Plumbing)`
-  color: #b87333;
-  width: 60px;
-`
-
-const StyledConstruction = styled(Construction)`
   color: #b87333;
   width: 60px;
 `
@@ -51,8 +44,6 @@ const ServiceSection = styled(Section)`
     }
   }
 `
-
-const ProjectSection = styled(ServiceSection)``
 
 const DienstenWrapper = styled.div`
   display: flex;

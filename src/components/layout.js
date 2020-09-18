@@ -17,11 +17,13 @@ body {
 html {
   font-size: 17px;
 }
-@media (max-width: 900px) {
+${
+  '' /* @media (max-width: 900px) {
 html { font-size: 15px; }
 }
 @media (max-width: 415px) {
   html { font-size: 13px; }
+} */
 }
 main {
   padding-bottom: 5rem;    /* Footer height */
