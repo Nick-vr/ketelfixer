@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 const Wrapper = styled.section`
   width: 90%;
@@ -51,15 +52,6 @@ const Label = styled.label`
   border-bottom: 1px solid #a3a3a3;
   height: 100px;
 
-  & ${Input}:valid {
-    border-bottom: 1px solid green;
-  }
-
-  /* TODO: fix green shit */
-  & textarea:valid {
-    border-bottom: 1px solid green;
-  }
-
   & ${Input}:focus + ${Span}, ${Input}:valid + ${Span} {
     bottom: 30px;
   }
@@ -101,37 +93,76 @@ const Button = styled.button`
   }
 `
 
-const contactForm = () => (
-  <Wrapper>
-    <StyledForm name="contact" netlify>
-      <InputWrapper>
-        <Label>
-          <Input type="text" name="firstName" placeholder=" " required />
-          <Span>Voornaam </Span>
-        </Label>
-      </InputWrapper>
-      <InputWrapper>
-        <Label>
-          <Input type="text" name="lastName" placeholder=" " required />
-          <Span>Achternaam </Span>
-        </Label>
-      </InputWrapper>
-      <InputWrapper>
-        <Label>
-          <Input type="email" name="email" placeholder=" " required />
-          <Span>Email </Span>
-        </Label>
-      </InputWrapper>
-      <InputWrapper>
-        <Label>
-          <Textarea name="message" required />
-          <Span>Bericht </Span>
-        </Label>
-      </InputWrapper>
+const ContactForm = () => {
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null,
+    submitted: false,
+  })
+  const handleServerResponse = (ok, msg, form) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg },
+    })
+    if (ok) {
+      form.reset()
+    }
+  }
+  const handleOnSubmit = e => {
+    return false
+    e.preventDefault()
+    const form = e.target
+    setServerState({ submitting: true })
+    axios({
+      method: 'post',
+      url: `https://getform.io/f/${process.env.GETFORM_ENDPOINT}`,
+      data: new FormData(form),
+    })
+      .then(() => {
+        handleServerResponse(true, 'Thanks!', form)
+        setServerState({ submitted: true })
+        setTimeout(() => {
+          window.location.href = '/'
+        }, 1000)
+      })
+      .catch(r => {
+        handleServerResponse(false, r.response.data.error, form)
+      })
+  }
 
-      <Button type="submit">Verzenden</Button>
-    </StyledForm>
-  </Wrapper>
-)
+  return (
+    <Wrapper>
+      <StyledForm name="contact" onSubmit={handleOnSubmit}>
+        <InputWrapper>
+          <Label>
+            <Input type="text" name="firstName" placeholder=" " required />
+            <Span>Voornaam </Span>
+          </Label>
+        </InputWrapper>
+        <InputWrapper>
+          <Label>
+            <Input type="text" name="lastName" placeholder=" " required />
+            <Span>Achternaam </Span>
+          </Label>
+        </InputWrapper>
+        <InputWrapper>
+          <Label>
+            <Input type="email" name="email" placeholder=" " required />
+            <Span>Email </Span>
+          </Label>
+        </InputWrapper>
+        <InputWrapper>
+          <Label>
+            <Textarea name="message" required />
+            <Span>Bericht </Span>
+          </Label>
+        </InputWrapper>
+        <Button type="submit" disabled={serverState.submitting}>
+          {serverState.submitted === false ? `Verzenden` : `Verzonden!`}
+        </Button>
+      </StyledForm>
+    </Wrapper>
+  )
+}
 
-export default contactForm
+export default ContactForm

@@ -13,6 +13,16 @@ const ContactInfoWrapper = styled.div`
     justify-content: center;
     padding-bottom: 20px;
   }
+  @media (max-width: 900px) {
+    p {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 415px) {
+    p {
+      font-size: 13px;
+    }
+  }
 `
 
 const PhoneInfoWrapper = styled.div`

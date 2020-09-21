@@ -21,6 +21,9 @@ const StickyNav = styled.nav`
     display: flex;
     li {
       margin: 0 1.5rem;
+      @media (max-width: 735px) {
+        margin: 0 0.8rem;
+      }
       a {
         text-transform: uppercase;
         color: black;
@@ -32,7 +35,7 @@ const StickyNav = styled.nav`
           color: #fff;
         }
         @media (max-width: 735px) {
-          font-size: 0.7rem;
+          font-size: 0.8rem;
         }
       }
     }

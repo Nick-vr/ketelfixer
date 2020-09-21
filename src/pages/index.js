@@ -57,7 +57,7 @@ const DienstenWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
+  margin: 80px 0 80px;
 
   @media (min-width: 1280px) {
     flex-direction: row;
@@ -94,6 +94,17 @@ const AboutSection = styled(Section)`
   }
 `
 
+const MaintenanceWrapper = styled.div`
+  figcaption {
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+`
+const RenewingWrapper = styled(MaintenanceWrapper)``
+const RenovationWrapper = styled(MaintenanceWrapper)``
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -104,9 +115,18 @@ const IndexPage = () => (
       <StyledPlumbing />
       <h1>Onze diensten</h1>
       <DienstenWrapper>
-        <Maintenance />
-        <Renewing />
-        <Renovation />
+        <MaintenanceWrapper>
+          <Maintenance />
+          <figcaption>Onderhoud & Keuringen</figcaption>
+        </MaintenanceWrapper>
+        <RenewingWrapper>
+          <Renewing />
+          <figcaption>Vernieuwen Ketels</figcaption>
+        </RenewingWrapper>
+        <RenovationWrapper>
+          <Renovation />
+          <figcaption>Badkamer Renovatie</figcaption>
+        </RenovationWrapper>
       </DienstenWrapper>
     </ServiceSection>
     {/* End ONZE DIENSTEN section */}

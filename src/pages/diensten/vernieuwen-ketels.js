@@ -5,7 +5,7 @@ import SEO from '../../components/seo'
 
 const VernieuwenKetelsPage = () => (
   <Layout>
-    <SEO title="Contact" description="YEEEEEET" />
+    <SEO title="Vernieuwen Ketels" />
     <div>
       <p>
         https://www.eco-star.be/a-40906073/offerte-plaatsing-condensatieketel-vaillant/plaatsing-vaillant-ecotec-plus-vcw-296/

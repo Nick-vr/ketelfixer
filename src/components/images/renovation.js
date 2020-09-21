@@ -7,13 +7,6 @@ const StyledFigure = styled.figure`
   width: 350px;
 `
 
-const StyledFigcaption = styled.figcaption`
-  font-size: 1.1rem;
-  text-align: center;
-  letter-spacing: 2px;
-  margin-top: 20px;
-`
-
 const Renovation = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -33,7 +26,6 @@ const Renovation = () => {
         fixed={data.renovationImage.childImageSharp.fixed}
         alt="Badkamer Renovatie IMG"
       />
-      <StyledFigcaption>Badkamer Renovatie</StyledFigcaption>
     </StyledFigure>
   )
 }
