@@ -49,7 +49,8 @@ const PhoneInfoWrapper = styled.div`
     }
   }
 
-  p {
+  p,
+  a {
     font-family: 'Roboto Slab', serif;
     font-style: italic;
     text-align: left;
@@ -77,14 +78,14 @@ const ContactInfo = () => (
         <StyledPhone />
         <p>Telefoon</p>
       </span>
-      <p>+32 499 15 10 44</p>
+      <a href="tel:+32499151044">+32 499 15 10 44</a>
     </PhoneInfoWrapper>
     <MailInfoWrapper>
       <span>
         <StyledMail />
         <p>Email</p>
       </span>
-      <p>contact@ketelfixer.be</p>
+      <a href="mailto:contact@ketelfixer.be">contact@ketelfixer.be</a>
     </MailInfoWrapper>
   </ContactInfoWrapper>
 )
