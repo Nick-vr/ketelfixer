@@ -18,8 +18,9 @@ const ContactInfoWrapper = styled.div`
       font-size: 15px;
     }
   }
-  @media (max-width: 415px) {
-    p {
+  @media (max-width: 540px) {
+    p,
+    a {
       font-size: 13px;
     }
   }

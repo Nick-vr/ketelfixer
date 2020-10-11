@@ -65,7 +65,7 @@ const DienstenWrapper = styled.div`
   }
 
   figure {
-    margin: 40px;
+    margin: 40px 0;
   }
 `
 
