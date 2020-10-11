@@ -49,8 +49,11 @@ const Span = styled.span`
 `
 
 const Label = styled.label`
-  border-bottom: 2px solid #a3a3a3;
   height: 100px;
+  input,
+  textarea {
+    border-bottom: 1px solid #a3a3a3;
+  }
 
   & ${Input}:focus + ${Span}, ${Input}:valid + ${Span} {
     bottom: 30px;

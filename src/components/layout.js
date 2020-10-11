@@ -17,14 +17,6 @@ body {
 html {
   font-size: 17px;
 }
-${
-  '' /* @media (max-width: 900px) {
-html { font-size: 15px; }
-}
-@media (max-width: 415px) {
-  html { font-size: 13px; }
-} */
-}
 main {
   padding-bottom: 5rem;    /* Footer height */
 }
@@ -40,7 +32,7 @@ h3 {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
