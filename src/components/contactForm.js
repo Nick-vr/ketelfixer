@@ -55,6 +55,10 @@ const Label = styled.label`
     border-bottom: 1px solid #a3a3a3;
   }
 
+  span {
+    padding-bottom: 2px;
+  }
+
   & ${Input}:focus + ${Span}, ${Input}:valid + ${Span} {
     bottom: 30px;
   }
