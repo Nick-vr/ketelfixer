@@ -121,7 +121,7 @@ const ContactForm = () => {
     setServerState({ submitting: true })
     axios({
       method: 'post',
-      url: `https://getform.io/f/${process.env.GETFORM_ENDPOINT}`,
+      url: `https://getform.io/f/${process.env.GATSBY_GETFORM_ENDPOINT}`,
       data: new FormData(form),
     })
       .then(() => {
