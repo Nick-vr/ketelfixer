@@ -65,7 +65,11 @@ const DienstenWrapper = styled.div`
   }
 
   figure {
-    margin: 40px 0;
+    margin: 40px;
+
+    @media (max-width: 1265px) {
+      margin: 40px 0;
+    }
   }
 `
 
