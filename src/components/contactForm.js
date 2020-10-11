@@ -109,7 +109,6 @@ const ContactForm = () => {
     }
   }
   const handleOnSubmit = e => {
-    return false
     e.preventDefault()
     const form = e.target
     setServerState({ submitting: true })

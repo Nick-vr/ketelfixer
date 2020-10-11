@@ -49,6 +49,7 @@ a {
 }
 input, textarea, button {
   font-family: inherit;
+  font-size: 100%;
 }
 `
 

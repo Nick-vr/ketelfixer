@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 import logo from '../images/logo.png'
 import prism from '../images/prism.png'
@@ -39,7 +40,9 @@ const Header = () => (
   <>
     <HeaderContainer>
       <HeaderLogo>
-        <img src={logo} height="35px" alt="logo" />
+        <Link to="/">
+          <img src={logo} height="60px" alt="logo" />
+        </Link>
       </HeaderLogo>
       <ContactInfo />
     </HeaderContainer>

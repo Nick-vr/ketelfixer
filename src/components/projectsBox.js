@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  /* background-color: blue; */
   padding: 50px;
   display: flex;
   align-items: center;
